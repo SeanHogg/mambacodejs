@@ -50,6 +50,7 @@ npm run build   # compiles TypeScript → dist/
 | **[Integration & Architecture](docs/integration-architecture.md)** | Production architecture guide — embedding Mamba as a unified brain + memory system, integration patterns, advanced use cases, and design tradeoffs |
 | **[Weight Lifecycle](docs/weight-lifecycle.md)** | Complete guide to obtaining Qwen vocabulary files, loading pre-trained checkpoints, fine-tuning, exporting weights, and sharing with your team |
 | **[API Reference](docs/api-reference.md)** | Full technical reference — every exported class, interface, and function with TypeScript and JavaScript examples |
+| **[MambaKit PRD](docs/mamba-kit-prd.md)** | Product requirements document for MambaKit — an opinionated, zero-boilerplate facade over MambaCode.js |
 
 ---
 
