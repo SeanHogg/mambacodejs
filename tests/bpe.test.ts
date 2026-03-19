@@ -1,9 +1,9 @@
 /**
- * tests/bpe.test.js
+ * tests/bpe.test.ts
  * Unit tests for the BPE tokenizer (no GPU required).
  */
 
-import { BPETokenizer } from '../src/tokenizer/bpe.js';
+import { BPETokenizer } from '../src/tokenizer/bpe';
 
 // ── Minimal synthetic vocabulary for testing ──────────────────────────────────
 
@@ -14,7 +14,7 @@ function buildTinyTokenizer() {
     // The byte encoder maps bytes 33–126 (! to ~) to themselves,
     // so single-char printable ASCII tokens are their own strings.
 
-    const vocab = {};
+    const vocab: Record<string, number> = {};
     // Add byte-level tokens (printable ASCII 33–126 → same character)
     for (let b = 33; b <= 126; b++) {
         vocab[String.fromCodePoint(b)] = b - 33;

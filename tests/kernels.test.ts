@@ -1,19 +1,19 @@
 /**
- * tests/kernels.test.js
+ * tests/kernels.test.ts
  * Smoke tests that verify the WGSL kernel sources export non-empty strings.
  * (Full GPU execution tests require a browser environment with WebGPU.)
  */
 
 import { SELECTIVE_SCAN_FORWARD_WGSL, SELECTIVE_SCAN_BACKWARD_WGSL }
-    from '../src/kernels/selective_scan.js';
+    from '../src/kernels/selective_scan';
 import { CONV1D_FORWARD_WGSL, CONV1D_BACKWARD_WGSL }
-    from '../src/kernels/conv1d.js';
+    from '../src/kernels/conv1d';
 import { LINEAR_FORWARD_WGSL, LINEAR_BACKWARD_WGSL }
-    from '../src/kernels/linear_projection.js';
+    from '../src/kernels/linear_projection';
 import { WEIGHT_UPDATE_WGSL, GRAD_CLIP_WGSL }
-    from '../src/kernels/weight_update.js';
+    from '../src/kernels/weight_update';
 import { ACTIVATIONS_WGSL, ACTIVATIONS_BACKWARD_WGSL }
-    from '../src/kernels/activations.js';
+    from '../src/kernels/activations';
 
 // ── Selective scan ────────────────────────────────────────────────────────────
 

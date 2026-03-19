@@ -1,5 +1,5 @@
 /**
- * tests/autograd.test.js
+ * tests/autograd.test.ts
  * Unit tests for the tape-based autograd engine.
  */
 
@@ -12,7 +12,7 @@ import {
     backward,
     crossEntropyLoss,
     crossEntropyGrad,
-} from '../src/training/autograd.js';
+} from '../src/training/autograd';
 
 // ── crossEntropyLoss ──────────────────────────────────────────────────────────
 
@@ -88,7 +88,7 @@ test('backward calls closures in reverse order', async () => {
     enableGrad();
     clearTape();
 
-    const order = [];
+    const order: number[] = [];
     recordOperation(async () => { order.push(1); });
     recordOperation(async () => { order.push(2); });
     recordOperation(async () => { order.push(3); });
@@ -103,7 +103,7 @@ test('backward clears the tape', async () => {
     recordOperation(async () => {});
     await backward();
     // After backward the tape should be empty, so calling backward again is a no-op
-    const order = [];
+    const order: number[] = [];
     await backward();
     expect(order.length).toBe(0);
 });

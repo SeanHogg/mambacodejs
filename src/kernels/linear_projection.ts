@@ -8,7 +8,7 @@
 //   b : (out_features,)                  – bias
 //   Y : (batch * seq_len, out_features)  – output
 
-export const LINEAR_FORWARD_WGSL = /* wgsl */`
+export const LINEAR_FORWARD_WGSL: string = /* wgsl */`
 
 struct LinearParams {
     M : u32,   // number of rows    (batch * seq_len)
@@ -78,7 +78,7 @@ fn linear_forward(
 `;
 
 // ---- Backward pass for linear projection ----
-export const LINEAR_BACKWARD_WGSL = /* wgsl */`
+export const LINEAR_BACKWARD_WGSL: string = /* wgsl */`
 
 struct LinearParams {
     M : u32,

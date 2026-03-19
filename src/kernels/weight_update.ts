@@ -8,7 +8,7 @@
 //   v_hat = v_t / (1 - beta2^t)
 //   theta_t = theta_{t-1} * (1 - lr * weight_decay) - lr * m_hat / (sqrt(v_hat) + eps)
 
-export const WEIGHT_UPDATE_WGSL = /* wgsl */`
+export const WEIGHT_UPDATE_WGSL: string = /* wgsl */`
 
 struct AdamParams {
     num_elements   : u32,
@@ -60,7 +60,7 @@ fn adamw_update(
 
 // Gradient clipping kernel – clips global gradient norm to max_norm.
 // Run before weight updates.  Two-pass: first compute squared norm, then scale.
-export const GRAD_CLIP_WGSL = /* wgsl */`
+export const GRAD_CLIP_WGSL: string = /* wgsl */`
 
 struct ClipParams {
     num_elements : u32,

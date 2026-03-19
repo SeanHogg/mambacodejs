@@ -1,5 +1,5 @@
 /**
- * tests/quantization.test.js
+ * tests/quantization.test.ts
  * Unit tests for the quantization utilities (no GPU required).
  */
 
@@ -13,7 +13,7 @@ import {
     quantizeInt8PerChannel,
     dequantizeInt8PerChannel,
     estimateMemory,
-} from '../src/utils/quantization.js';
+} from '../src/utils/quantization';
 
 // ── FP16 round-trip ───────────────────────────────────────────────────────────
 
