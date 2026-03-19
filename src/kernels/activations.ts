@@ -1,7 +1,7 @@
 // Activation function WGSL kernels: SiLU (Swish) and its backward pass.
 // Used in the gating mechanism of the Mamba Mixer Block.
 
-export const ACTIVATIONS_WGSL = /* wgsl */`
+export const ACTIVATIONS_WGSL: string = /* wgsl */`
 
 struct ActParams {
     num_elements : u32,
@@ -61,7 +61,7 @@ fn rmsnorm_forward(
 `;
 
 // ---- Backward for SiLU ----
-export const ACTIVATIONS_BACKWARD_WGSL = /* wgsl */`
+export const ACTIVATIONS_BACKWARD_WGSL: string = /* wgsl */`
 
 struct ActParams {
     num_elements : u32,

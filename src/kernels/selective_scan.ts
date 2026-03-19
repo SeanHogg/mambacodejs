@@ -8,7 +8,7 @@
 //
 // where A_t, B_t, C_t are input-dependent (selective) gate matrices.
 
-export const SELECTIVE_SCAN_FORWARD_WGSL = /* wgsl */`
+export const SELECTIVE_SCAN_FORWARD_WGSL: string = /* wgsl */`
 
 // ---- Binding layout ----
 // group 0: sequence data
@@ -227,7 +227,7 @@ fn forward_reduce(
 // ---- Backward scan kernel (for autograd) ----
 // Computes gradients w.r.t. Δ, A, B, C using the cached hidden states.
 
-export const SELECTIVE_SCAN_BACKWARD_WGSL = /* wgsl */`
+export const SELECTIVE_SCAN_BACKWARD_WGSL: string = /* wgsl */`
 
 struct ScanParams {
     seq_len  : u32,
