@@ -355,6 +355,33 @@ npm run lint    # ESLint
 
 ---
 
+## Professional Platform
+
+**Want managed infrastructure for your MambaCode.js models?**
+
+[**Builderforce.ai**](https://builderforce.ai) is the professional enterprise platform built on MambaCode.js. It provides:
+
+- **In-browser LoRA training** — fine-tune up to 2B-parameter models on instruction datasets using the MambaCode.js WebGPU kernels, entirely client-side
+- **Hybrid Local Brain** — the Mamba State Engine runs a selective scan alongside Transformers.js inference for persistent agent memory, powered by MambaCode.js WGSL kernels
+- **Dataset generation** — LLM-assisted JSONL instruction dataset creation with streaming progress
+- **Workforce Registry** — publish trained models as specialist AI agents; discoverable and hirable by the community
+- **Agent portability** — `AgentPackage` bundles the LoRA adapter, `MambaStateSnapshot`, and agent profile into a single portable JSON artifact
+- **CoderClaw mesh** — trained agents deploy as self-hosted coding agents via [CoderClaw](https://coderclaw.ai), orchestrated from Builderforce
+
+Use MambaCode.js to build and experiment locally. Use Builderforce.ai to deploy, manage, and share at scale.
+
+```
+MambaCode.js (WebGPU kernels)
+      ↓
+  MambaKit (session API)
+      ↓
+ Builderforce.ai (enterprise IDE + training + registry)
+      ↓
+   CoderClaw (self-hosted agent mesh)
+```
+
+---
+
 ## License
 
 MIT
