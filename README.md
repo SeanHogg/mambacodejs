@@ -2,7 +2,7 @@
 
 > WebGPU-accelerated Mamba-1/2/3 and Hybrid SSM library — written in **TypeScript**, compiled for use in any JavaScript application.
 
-[![npm](https://img.shields.io/npm/v/mambacode.js)](https://www.npmjs.com/package/mambacode.js)
+[![npm](https://img.shields.io/npm/v/@seanhogg/mambacode.js)](https://www.npmjs.com/package/@seanhogg/mambacode.js)
 [![license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
 MambaCode.js is a **TypeScript-first** library that brings the Mamba family of State Space Models to the browser via WebGPU. Version 2.0.0 adds **Mamba-2** (SSD), **Mamba-3** (complex-valued MIMO + ET discretisation), and **hybrid attention** layers, while remaining fully backward-compatible with Mamba-1 checkpoints.
