@@ -373,7 +373,7 @@ Use MambaCode.js to build and experiment locally. Use Builderforce.ai to deploy,
 ```
 MambaCode.js (WebGPU kernels)
       ↓
-  MambaKit (session API)
+  SSM.js (session API + runtime + memory)
       ↓
  Builderforce.ai (enterprise IDE + training + registry)
       ↓
