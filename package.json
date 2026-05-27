@@ -23,6 +23,7 @@
     "serve": "node serve.js",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "lint": "eslint src/ tests/",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run build"
   },
   "keywords": ["mamba", "ssm", "state-space-model", "webgpu", "wgsl", "machine-learning", "code-model", "bpe", "transformer-alternative", "typescript"],
