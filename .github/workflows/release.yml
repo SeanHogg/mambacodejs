@@ -16,10 +16,20 @@ jobs:
           node-version: 20
           cache: npm
           registry-url: https://registry.npmjs.org
+      # Fail fast with an actionable message instead of a cryptic 404 after build.
+      - name: Verify npm auth
+        run: |
+          if [ -z "${NODE_AUTH_TOKEN}" ]; then
+            echo "::error::NPM_TOKEN secret is not set. Add an npm Automation token with publish rights to the @seanhogg scope as repo secret NPM_TOKEN."
+            exit 1
+          fi
+          npm whoami || { echo "::error::npm auth failed — NPM_TOKEN is invalid/expired or lacks publish access to @seanhogg/mambacode.js. Generate a new Automation token at npmjs.com → Access Tokens and update the NPM_TOKEN secret."; exit 1; }
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm ci
       - run: npm run build
       - run: npm test
-      - run: npm publish
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - uses: softprops/action-gh-release@v2
